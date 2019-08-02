@@ -17,9 +17,12 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  database: fintech
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  password: fintech
 
 development:
   <<: *default
@@ -78,8 +81,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: fhmnews_production
-  username: fhmnews
-  password: <%= ENV['FHMNEWS_DATABASE_PASSWORD'] %>
+#production:
+#  <<: *default
+#  database: fhmnews_production
+#  username: fhmnews
+#  password: <%= ENV['FHMNEWS_DATABASE_PASSWORD'] %>
