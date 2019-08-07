@@ -11,6 +11,7 @@ gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'sendgrid-ruby', '~> 6.0'
 gem 'aws-sdk-s3', '~> 1.46'
 gem 'pg'
+gem 'mini_magick', '~> 4.9', '>= 4.9.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0.rc2'
 # Use pg as the database for Active Record
