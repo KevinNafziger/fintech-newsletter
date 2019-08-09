@@ -4,7 +4,7 @@
   "name": "fhmnews",
   "private": true,
   "engines": {
-    "yarn": "1.17.3"
+    "yarn": "v1.17.3"
   }
   "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",
