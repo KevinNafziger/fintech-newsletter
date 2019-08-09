@@ -1,6 +1,11 @@
+
+
 {
   "name": "fhmnews",
   "private": true,
+  "engines": {
+    "yarn": "1.17.3"
+  }
   "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/actiontext": "^6.0.0-rc2",
@@ -16,10 +21,5 @@
   "version": "0.1.0",
   "devDependencies": {
     "webpack-dev-server": "^3.7.2"
-  },
-  {
-    "optionalDepencies": {
-      "fsevents": "*"
-    }
   }
 }
