@@ -3,10 +3,7 @@
 {
   "name": "fhmnews",
   "private": true,
-  "engines": {
-    "yarn": "v1.17.3"
-  }
-  "dependencies": {
+    "dependencies": {
     "@rails/actioncable": "^6.0.0-alpha",
     "@rails/actiontext": "^6.0.0-rc2",
     "@rails/activestorage": "^6.0.0-alpha",
