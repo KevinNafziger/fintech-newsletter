@@ -6,7 +6,7 @@ ruby '2.6.3'
 gem 'actiontext', '~> 6.0.0.rc2'
 gem 'pdfkit', '~> 0.8.4.1'
 gem 'wkhtmltopdf-heroku', '~> 2.12', '>= 2.12.5.0'
-#gem 'wkhtmltopdf-binary', '~> 0.12.4'
+
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'sendgrid-ruby', '~> 6.0'
 gem 'aws-sdk-s3', '~> 1.46', require: false
@@ -15,7 +15,7 @@ gem 'mini_magick', '~> 4.9', '>= 4.9.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0.rc2'
 # Use pg as the database for Active Record
-#gem 'pg', '~> 1.4'
+# gem 'pg', '~> 1.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -43,6 +43,8 @@ group :development, :test do
 end
 
 group :development do
+  # gem 'sqlite3', '~> 1.4'
+  gem 'wkhtmltopdf-binary', '~> 0.12.4'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
