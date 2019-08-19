@@ -243,7 +243,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  actiontext (~> 6.0.0.rc2)
   aws-sdk-s3 (~> 1.46)
   bootsnap (>= 1.4.2)
   byebug
