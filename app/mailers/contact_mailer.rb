@@ -4,7 +4,7 @@ class ContactMailer < ApplicationMailer
   # Send a signup email to the user, pass in the user object that contains the user's email address
   def send_signup_email(contact)
     @contact = contact
-      mail( :to => @contact.email,
+      mail( :to => "#{contact.name} <#{contact.email}>",
       :subject => 'Welcome to Fintech Horizons Newsletter' )
     end
 end
