@@ -4,7 +4,7 @@ class ContactMailer < ApplicationMailer
   # Send a signup email to the user, pass in the user object that contains the user's email address
   def send_signup_email(contact)
     @contact = contact
-    attachments["banner.png"] = File.read("#{Rails.root}/public/images/banner.png")
+    attachments["banner.png"] = File.read("#{Rails.root}/public/images/banner.PNG")
       mail( :to => "#{contact.name} <#{contact.email}>",
       :subject => 'Welcome to Fintech Horizons Media Newsletter' )
     end
