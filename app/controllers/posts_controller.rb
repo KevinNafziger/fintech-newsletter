@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  after_create :post_mailer_send
+  after_action :post_mailer_send
   # GET /posts
   # GET /posts.json
   def index
