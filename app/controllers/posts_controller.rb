@@ -25,10 +25,10 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
+    PostMailer.new_fhmnews_post(@post).deliver
     respond_to do |format|
       if @post.save
-        PostMailer.new_fhmnews_post(@post).deliver
+
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
