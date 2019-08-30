@@ -64,7 +64,7 @@ class PostsController < ApplicationController
 
   private
     def post_mailer_send
-      PostMailer.new_post(self).deliver
+      PostMailer.new_fhmnews_post(self).deliver
     end
     # Use callbacks to share common setup or constraints between actions.
     def set_post
