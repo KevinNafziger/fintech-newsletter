@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
-  after_action :post_mailer_send
+  before_action :set_post, only: [:show, :edit, :update, :destroy]  
   # GET /posts
   # GET /posts.json
   def index
@@ -28,7 +27,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        #PostMailer.new_fhmnews_post(@post).deliver
+        PostMailer.new_fhmnews_post(@post).deliver
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
@@ -63,9 +62,6 @@ class PostsController < ApplicationController
   end
 
   private
-    def post_mailer_send
-      PostMailer.new_fhmnews_post(@post).deliver
-    end
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
