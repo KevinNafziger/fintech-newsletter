@@ -5,7 +5,6 @@ class PostMailer < ApplicationMailer
     @post = post
     Contact.all.each do |contact|
       mail(to: contact.email, subject: "We have a new interesting post for you...")
-      subject: "We have a new interesting post for you...")
     end
   end
 end
