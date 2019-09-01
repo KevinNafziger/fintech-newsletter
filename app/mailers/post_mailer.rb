@@ -1,7 +1,7 @@
 class PostMailer < ApplicationMailer
   default :from => 'news@fintechhorizonsmedia.com'
 
-  def new_fhmnews_post(post, contact)
+  def new_fhmnews_post(post)
     @post = post
     @contact = contact
     Contact.all.each do |contact|
