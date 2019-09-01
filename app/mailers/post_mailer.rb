@@ -3,7 +3,7 @@ class PostMailer < ApplicationMailer
 
   def new_fhmnews_post(post)
     @post = post
-    @contacts.each do |contact|
+    @contact.all.each do |contact|
       mail(:to => "#{contact.name} <#{contact.email}>",
       subject: "We have a new interesting post for you...")
     end
