@@ -3,7 +3,7 @@ class Post < ApplicationRecord
   after_create :new_fhmnews_post
 
   def new_fhmnews_post
-    PostMailer.new_fhmnews_post(self).deliver_later
+    PostMailer.new_fhmnews_post(self)
   end
 
 end
