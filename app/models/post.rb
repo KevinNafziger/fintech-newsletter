@@ -4,6 +4,6 @@ class Post < ApplicationRecord
 
   private
     def new_fhmnews_post
-      PostMailer.new_fhmnews_post(self).deliver
+      PostMailer.new_fhmnews_post(self)
     end
 end
