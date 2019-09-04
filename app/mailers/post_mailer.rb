@@ -4,7 +4,6 @@ class PostMailer < ApplicationMailer
   def new_fhmnews_post(post)
     @post = post
       mail(to: contact.email, subject: "#{contact.name}, We have a new interesting post for you...")
-
   end
 end
     # @post = post
