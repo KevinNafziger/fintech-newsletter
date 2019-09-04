@@ -1,6 +1,6 @@
 class PostMailer < ApplicationMailer
   default :from => 'news@fintechhorizonsmedia.com'
-  @contacts = Contact.all
+  
   def new_fhmnews_post(post)
     @post = post
     @contacts = Contact.all
