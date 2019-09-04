@@ -28,7 +28,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         #PostMailer.new_fhmnews_post(@post).deliver_now
-        
+
         PostMailer.new_fhmnews_post(@post).deliver
 
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
