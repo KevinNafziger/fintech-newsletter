@@ -2,4 +2,12 @@
 
 <p><%= link_to 'Go to Posts page', posts_path %> | <%= link_to 'Go to Mailer page', contacts_path %></p></p>
 
+
+<% @contacts.each do |c| %>
+  <h3><%= @contact.name %></h3>
+  <div>
+    <%= @contact.email %>
+  </div>
+<% end %>
+
 <p>Find me in app/views/home/index.html.erb</p>
