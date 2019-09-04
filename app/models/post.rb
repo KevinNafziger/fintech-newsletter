@@ -1,8 +1,7 @@
 class Post < ApplicationRecord
   has_rich_text :description
-  after_save :new_fhmnews_post  
+  after_save :new_fhmnews_post
 
-  private
     Contact.all.each do |contact|
       PostMailer.new_fhmnews_post(self).deliver
     end
