@@ -28,7 +28,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
 
-        @contacts = @post.Contact.all
+        @contacts = Contact.all
           @contacts.each do |c|
             PostMailer.new_fhmnews_post(@post).deliver
           end
