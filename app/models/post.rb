@@ -6,4 +6,12 @@ class Post < ApplicationRecord
   #   def new_fhmnews_post
   #     PostMailer.new_fhmnews_post(self).deliver
   #   end
+
+  def new_fhmnews_post(post)
+    @recipients = Contact.all
+    @recipients.each do |r|
+      PostMailer.new_fhmnews_post(@post).deliver
+    end
+  end
+
 end

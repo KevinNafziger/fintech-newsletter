@@ -71,13 +71,4 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :description)
     end
-
-    def email_to_contacts(post)
-      @recipients = Contact.all
-
-      @recipients.each do |r|
-        PostMailer.new_fhmnews_post(@post).deliver
-      end
-    end
-
 end
