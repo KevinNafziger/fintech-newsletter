@@ -27,7 +27,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        PostMailer.new_fhmnews_post(@post).deliver
+        #PostMailer.new_fhmnews_post(@post).deliver
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
@@ -71,4 +71,13 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :description)
     end
+
+    def email_to_contacts(post)
+      @recipients = Contact.all
+
+      @recipients.each do |r|
+        PostMailer.new_fhmnews_post(@post).deliver
+      end
+    end
+
 end
