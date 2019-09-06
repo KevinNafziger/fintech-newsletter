@@ -7,10 +7,10 @@ class Post < ApplicationRecord
   #     PostMailer.new_fhmnews_post(self).deliver
   #   end
 
-  def new_fhmnews_post(post)
+  def new_fhmnews_post
     @recipients = Contact.all
     @recipients.each do |r|
-      PostMailer.new_fhmnews_post(@post).deliver
+      PostMailer.new_fhmnews_post(self).deliver
     end
   end
 
