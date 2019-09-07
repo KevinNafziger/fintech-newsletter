@@ -22,13 +22,12 @@ class PostsController < ApplicationController
 
   # POST /posts
   # POST /posts.json
-  def create
-    @contacts = Contact.all
+  def create    
     @post = Post.new(post_params)
 
     respond_to do |format|
       if @post.save
-        PostMailer.new_fhmnews_post(@post, @contacts).deliver
+        PostMailer.new_fhmnews_post(@post).deliver
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
