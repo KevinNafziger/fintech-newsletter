@@ -4,7 +4,8 @@ class PostMailer < ApplicationMailer
   def new_fhmnews_post(post)
     @post = post
 
-    Contact.all.each do |contact|
+    Contact.pluck(:id, :email).each do |id, email|
+      c = Contact.find_id
       mail(to: contact.email, subject: "#{contact.name}, We have a new interesting post for you...")
     end
   end
