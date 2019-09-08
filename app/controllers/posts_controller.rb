@@ -24,11 +24,10 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-    @contact = Contact.all
 
     respond_to do |format|
       if @post.save
-        Contact.find_each do |contact|
+        Publications.Contact.find_each do |contact|
           PostMailer.new_fhmnews_post(@post).deliver
         end
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
