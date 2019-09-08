@@ -1,8 +1,9 @@
 class PostMailer < ApplicationMailer
   default :from => 'news@fintechhorizonsmedia.com'
 
-  def new_fhmnews_post(post)
+  def new_fhmnews_post(post, contact)
     @post = post
+    @contact = contact
 
     #Contact.find_each do |contact|
       mail(to: contact.email, subject: "#{contact.name}, We have a new interesting post for you...")
