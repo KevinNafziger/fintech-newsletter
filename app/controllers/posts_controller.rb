@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-    @contact = Contact.all
+    @contacts = Contact.all
 
     respond_to do |format|
       if @post.save
