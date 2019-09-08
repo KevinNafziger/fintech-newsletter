@@ -27,7 +27,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        Publication.Contact.find_each do |contact|
+        Contact.all.each do |contact|
           PostMailer.new_fhmnews_post(@post).deliver
         end
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
