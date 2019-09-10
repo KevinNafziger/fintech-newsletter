@@ -4,8 +4,9 @@ class PostMailer < ApplicationMailer
   def new_fhmnews_post(post, contact)
     @post = post
     @contact = contact
-
+    
     Contact.find_each do |contact|
+      attachments.inline["banner.png"] = File.read("#{Rails.root}/public/images/banner.PNG")
       mail(to: contact.email, subject: "#{contact.name}, We have a new interesting post for you...").deliver
     end
   end
