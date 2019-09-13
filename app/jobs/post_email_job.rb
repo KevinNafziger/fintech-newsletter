@@ -1,7 +1,8 @@
 class PostEmailJob < ApplicationJob
   queue_as :default
+  
 
-  def perform(post, contact)
+  def perform(post)
     # Do something later
     @post = post
     @contact = contact
