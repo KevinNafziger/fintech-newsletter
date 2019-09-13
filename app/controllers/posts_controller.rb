@@ -28,9 +28,12 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        #Contact.find_each do |contact|
-          PostMailer.new_fhmnews_post(@post, @contact).deliver
+        # Without Active Job
+          # PostMailer.new_fhmnews_post(@post, @contact).deliver
         #end
+
+        # Using Active Job
+        PostEmailJob.set(wait: 30.seconds).perform_later(@post, @contact)
 
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
