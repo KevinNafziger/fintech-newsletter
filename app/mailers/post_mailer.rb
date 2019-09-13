@@ -7,7 +7,7 @@ class PostMailer < ApplicationMailer
     attachments["banner.png"] = File.read("#{Rails.root}/public/images/banner.PNG")
 
     Contact.find_each do |contact|
-      mail(to: contact.email, subject: "#{contact.name}, We have a new interesting post for you...")
+      mail(to: contact.email, subject: "#{contact.name}, We have a new interesting post for you...").deliver_later
     end
   end
 end
