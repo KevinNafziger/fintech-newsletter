@@ -3,6 +3,6 @@ class PostEmailJob < ApplicationJob
 
   def perform(post,contact)
     # Do something later
-    PostMailer.post_email(post,contact)
+    PostMailer.new_fhmnews_post(post,contact)
   end
 end
