@@ -6,6 +6,7 @@ ruby '2.6.3'
 gem 'pdfkit', '~> 0.8.4.1'
 gem 'wkhtmltopdf-heroku', '~> 2.12', '>= 2.12.5.0'
 
+gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.4'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'sendgrid-ruby', '~> 6.0'
 gem 'aws-sdk-s3', '~> 1.46', require: false
