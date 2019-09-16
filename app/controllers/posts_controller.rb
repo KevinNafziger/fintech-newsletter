@@ -29,7 +29,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         #Contact.find_each do |contact|
-          PostMailer.new_fhmnews_post(@post, @contact).deliver_later
+          PostMailer.new_fhmnews_post(@post, @contact).deliver
         #end
         #PostEmailJob.set(wait: 30.seconds).perform_later(@post, @contact)
 
