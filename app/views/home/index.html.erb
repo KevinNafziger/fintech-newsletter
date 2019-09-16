@@ -1,5 +1,11 @@
-<h1>Home#index</h1>
+<h3>FHM Newsletters</h3>
+
+<% if current_user %>
+  <p><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></p>
+<% else %>
+  <p><%= link_to 'Sign up', new_user_registration_path %> | <% link_to 'Sign In', new_user_session_path %></p>
+<% end %>
 
 <p><%= link_to 'Go to Posts page', posts_path %> | <%= link_to 'Go to Mailer page', contacts_path %></p></p>
 
-<p>Find me in app/views/home/index.html.erb</p>
+<p>Fintech Horizons Media Newsletters 2019</p>
