@@ -2,6 +2,7 @@ class PostMailer < ApplicationMailer
   default :from => 'news@fintechhorizonsmedia.com'
 
   def new_fhmnews_post(post, contact)
+    @url = "Fintech Horizons Media News <news@fintechhorizonsmedia.com>"
     @post = post
     @contact = contact
     attachments["banner.png"] = File.read("#{Rails.root}/public/images/banner.PNG")
