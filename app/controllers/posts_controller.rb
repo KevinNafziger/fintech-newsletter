@@ -31,7 +31,7 @@ class PostsController < ApplicationController
 
       #if @post.save
         #Contact.find_each do |contact|
-      if verify_recapcha(model: @post) && @post.save
+      if verify_recaptcha(model: @post) && @post.save
         PostMailer.new_fhmnews_post(@post, @contact).deliver
         #end
         #PostEmailJob.set(wait: 30.seconds).perform_later(@post, @contact)
