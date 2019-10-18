@@ -25,12 +25,14 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)    
+    @post = Post.new(post_params)
 
     respond_to do |format|
-      if @post.save
+
+      #if @post.save
         #Contact.find_each do |contact|
-          PostMailer.new_fhmnews_post(@post, @contact).deliver
+      if verify_recapcha(model: @post) && @post.save
+        PostMailer.new_fhmnews_post(@post, @contact).deliver
         #end
         #PostEmailJob.set(wait: 30.seconds).perform_later(@post, @contact)
 
