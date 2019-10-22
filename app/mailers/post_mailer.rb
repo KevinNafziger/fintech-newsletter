@@ -1,5 +1,5 @@
 class PostMailer < ApplicationMailer
-  default :from => 'news@fintechhorizonsmedia.com'
+  default :from => 'Fintech Horizons Media News <news@fintechhorizonsmedia.com>'
 
   def new_fhmnews_post(post, contact)
     @url = "Fintech Horizons Media News <news@fintechhorizonsmedia.com>"
@@ -8,7 +8,7 @@ class PostMailer < ApplicationMailer
     attachments["banner.png"] = File.read("#{Rails.root}/public/images/banner.PNG")
 
     Contact.find_each do |contact|
-      mail(to: contact.email, subject: "#{contact.name}, We have a new interesting post for you...").deliver
+      mail(to: contact.email, from: "news@fintechhorizonsmedia.com", subject: "#{contact.name}, We have a new interesting post for you...").deliver
     end
   end
 end
