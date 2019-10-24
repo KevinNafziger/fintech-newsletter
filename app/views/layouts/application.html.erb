@@ -11,6 +11,11 @@
 
   <body>
     <%= render 'layouts/alerts' %>
+    <% if user_signed_in? %>
+      <small>Logged as: <%= current_user.email %></small>        
+    <% else %>
+      <small>You are not logged !</small>
+    <% end %>
     <%= yield %>
   </body>
 </html>
