@@ -9,6 +9,7 @@ gem "recaptcha", require: "recaptcha/rails"
 
 gem 'delayed_job_active_record', '~> 4.1', '>= 4.1.4'
 gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'omniauth-facebook', '~> 5.0'
 gem 'sendgrid-ruby', '~> 6.0'
 gem 'aws-sdk-s3', '~> 1.46', require: false
 gem 'pg'
