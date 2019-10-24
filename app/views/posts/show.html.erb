@@ -2,7 +2,7 @@
   <h3>Title:</h3>
   <%= @post.title %>
   <p><%= @post.description %></p>
-  <p>Posted By:  <small><%= @post.user_id %></small></p>
+  <p>Posted By:  <small><%= @post.user.email %></small></p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %> | <%= link_to "DOWNLOAD PDF", post_path(@post, :format => "pdf") %>
