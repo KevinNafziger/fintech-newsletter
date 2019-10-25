@@ -12,7 +12,10 @@
   <body>
     <%= render 'layouts/alerts' %>
     <% if user_signed_in? %>
-      <small>Logged as: <%= current_user.email %></small>        
+      <small>Logged as: <%= current_user.email %></small>
+        <% if current_user.provider != nil %>
+          <small> from: <%= current_user.provider %></small>
+        <% end %>
     <% else %>
       <small>You are not logged !</small>
     <% end %>
