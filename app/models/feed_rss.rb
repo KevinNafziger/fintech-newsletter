@@ -1,0 +1,2 @@
+class FeedRss < ApplicationRecord
+end
