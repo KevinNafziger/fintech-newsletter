@@ -1,8 +1,3 @@
-<% require 'rss' %>
-<% require 'open-uri' %>
-
-<% rss = RSS::Parser.parse('https://www.newsisfree.com/feed/',false) %>
-
 
 
 <style>
@@ -10,11 +5,19 @@
   h1 {
     text-align:center
   }
+
+.text {
+  color:black;
+}
+
 </style>
 
 <H1> Rss Feed Parser </H1>
-<div>
-<%= rss.items.each do |item| %>
-  <%  puts "#{item.title}"  %>
+
+<div class="text">
+
+
+<%= @rss.items.each do |item| %>
+  <%=  puts "#{item.title}"  %>
 <% end %>
 </div>
