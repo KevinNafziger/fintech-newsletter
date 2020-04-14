@@ -26,14 +26,8 @@ default: &default
 
 development:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  database: fintech-newsletter-dev
-  pool: 5
-  username: postgres
-  password: 369JAFAuni
-  host: localhost
-  port: 5432
+  database: <%= ENV['DATABASE_URL'] %>
+  #database: fintech-newsletter-dev
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

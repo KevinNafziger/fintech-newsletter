@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_25_010525) do
+ActiveRecord::Schema.define(version: 2019_11_02_123144) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +76,11 @@ ActiveRecord::Schema.define(version: 2019_10_25_010525) do
     t.index ["priority", "run_at"], name: "delayed_jobs_priority"
   end
 
+  create_table "feed_rsses", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
@@ -100,6 +105,19 @@ ActiveRecord::Schema.define(version: 2019_10_25_010525) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["contact_id"], name: "index_publications_on_contact_id"
     t.index ["post_id"], name: "index_publications_on_post_id"
+  end
+
+  create_table "purchases", force: :cascade do |t|
+    t.string "email"
+    t.integer "amount"
+    t.string "description"
+    t.string "currency"
+    t.string "customer_id"
+    t.string "card"
+    t.integer "product_id"
+    t.string "uuid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
