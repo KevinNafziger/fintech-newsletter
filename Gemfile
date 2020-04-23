@@ -67,3 +67,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #Rss gem for rss parsing
 gem 'rss'
+#open in browser mailer preview
+gem 'letter_opener_web', group: :development
