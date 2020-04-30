@@ -1,7 +1,10 @@
 <template>
   <div id="app">
   <main class="flexbox">
-  hello
+<center>  Hello, please let me know if you see this, Thanks.
+<br><br>
+  Hola, avisame si miras esto porfavor, Gracias.
+  </center>
   </main>
 
   </div>
