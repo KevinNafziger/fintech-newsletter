@@ -1,5 +1,15 @@
 # vue-dnd
 
+
+
+How to make me "vue-dnd" drag and drop app run:
+
+
+1 navigate to cd vue-dnd on inside ( cmd / bash)
+2 type: npm run serve
+
+
+
 ## Project setup
 ```
 npm install
