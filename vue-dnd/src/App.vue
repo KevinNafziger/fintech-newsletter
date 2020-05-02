@@ -6,6 +6,9 @@
      <Card id="card-1" draggable="true">
        <p> Card one </p>
       </Card>
+      <Card id="card-3" draggable="true">
+        <p> Card three </p>
+       </Card>
     </Board>
 
     <Board id="board-2">
@@ -65,6 +68,8 @@ background: #f3f3f3;
 
       padding: 15px;
 
+      border-radius:10px;
+
     }
 
     .flexbox .board .card {
@@ -73,6 +78,8 @@ background: #f3f3f3;
 
       cursor: pointer;
       margin-bottom: 15px;
+
+      border-radius:10px;
     }
 
 #app {
