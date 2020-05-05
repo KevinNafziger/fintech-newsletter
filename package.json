@@ -17,7 +17,7 @@
   "scripts": {
   "build": "webpack --config webpack.conf.js",
   "deploy": "npm run build && gh-pages -d build",
-  "start": "webpack-dev-server"
+  "start": "node server.js"
 },
   "version": "0.1.0",
   "devDependencies": {
