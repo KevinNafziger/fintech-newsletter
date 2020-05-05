@@ -1,4 +1,8 @@
+
+
+
 <% if current_user %>
+
 
   <p><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></p>
 <% else %>
@@ -7,7 +11,10 @@
 <% end %>
 <h3>FHM Newsletters</h3>
 
-<p><%= link_to 'Go to Posts page', posts_path %> | <%= link_to 'Go to Mailer page', contacts_path %></p></p>
+<p><%= link_to 'Go to Posts page', posts_path %> | <%= link_to 'Go to Mailer page', contacts_path %></p>
+
+
 
 <p>Fintech Horizons Media Newsletters 2019</p>
- <%= javascript_pack_tag 'hello_vue' %>
+
+ <a href="../builder/index">builder</a>
