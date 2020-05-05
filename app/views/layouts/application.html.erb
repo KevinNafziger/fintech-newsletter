@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Fintech Horizons Media 6.0v</title>
+    <title>Fintech Horizons Tool App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <%= render 'layouts/navbar' %>
+    
     <%= render 'layouts/alerts' %>
     <% if user_signed_in? %>
       <small>Logged as: <%= current_user.email %></small>
