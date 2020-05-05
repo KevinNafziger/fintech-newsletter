@@ -15,12 +15,13 @@
     "vue-template-compiler": "^2.6.11"
   },
   "scripts": {
-  "build": "webpack --config webpack.conf.js",
-  "deploy": "npm run build && gh-pages -d build",
-  "start": "webpack-dev-server"
-},
+    "build": "webpack --config webpack.conf.js",
+    "deploy": "npm run build && gh-pages -d build",
+    "start": "node server.js"
+  },
   "version": "0.1.0",
   "devDependencies": {
+    "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.7.2"
   }
 }
