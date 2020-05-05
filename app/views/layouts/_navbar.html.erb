@@ -1,4 +1,4 @@
-<html lang="en">
+
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -10,41 +10,51 @@
 </head>
 
 <style>
-.buildbtn {
-  float: right ;
+  .navbar-brand {
+     background-image: url("https://filesforfintech.s3.amazonaws.com/images/officer+piggy+notification.png");
+     background-size: cover;
+     background-repeat: no-repeat;
+     height:50px;
+     width:50px;
+
+  }
+
+  .navbar-dark .navbar-brand {
+    color: transparent !important;
 }
 </style>
 
 <body>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <!-- Brand -->
-  <a class="navbar-brand" href="#">Logo</a>
+
+  <!-- Dropdown -->
+
+    <a class="nav-link dropdown-toggle navbar-brand" href="#" id="navbardrop" data-toggle="dropdown"></a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Link 1</a>
+      <a class="dropdown-item" href="#">Link 2</a>
+      <a class="dropdown-item" href="#">Link 3</a>
+
+    </div>
+
 
   <!-- Links -->
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="#">Link 1</a>
+      <%= link_to 'Articles', posts_path, class:'nav-link' %>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link 2</a>
+      <%= link_to 'Mailer', contacts_path, class:'nav-link' %>
     </li>
+    <li class="nav-item">
+      <a href="../builder/index" class="nav-link" data-ajax="false">Builder</a>
+      </li>
 
-    <!-- Dropdown -->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Dropdown link
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Link 1</a>
-        <a class="dropdown-item" href="#">Link 2</a>
-        <a class="dropdown-item" href="#">Link 3</a>
-        <a href="../builder/index" data-ajax="false">Builder</a>
-      </div>
-    </li>
+
   </ul>
+
 </nav>
 <br>
 
 </body>
-</html>
