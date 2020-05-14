@@ -1,6 +1,7 @@
 
-
-import PureVueChart from 'pure-vue-chart';
+import Vue from 'vue'
+import PureVueChart from 'pure-vue-chart'
+import App from '../charts.vue'
 
 
 document.addEventListener('DOMContentLoaded', () => {
