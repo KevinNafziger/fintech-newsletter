@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
 
-gem 'pdfkit', '~> 0.8.4.1'
+gem 'pdfkit', '~> 0.8.7.2'
 gem 'wkhtmltopdf-heroku', '~> 2.12', '>= 2.12.5.0'
 gem "recaptcha", require: "recaptcha/rails"
 
